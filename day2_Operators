@@ -54,12 +54,17 @@ public class Solution {
     // Complete the solve function below.
     static void solve(double meal_cost, int tip_percent, int tax_percent) {
 
+        // calculate tip and tax
         double tip = meal_cost * tip_percent / 100;
         double tax = meal_cost * tax_percent / 100;
-
-        int total = (int)(meal_cost + tip + tax);
-
-        System.out.println(total);
+        
+        // add meal cost, tip, and tax
+        double total = meal_cost + tip + tax;
+        // change to integer and rounded to the nearest dollar
+        int finalTotal = (int) Math.round(total);
+        
+        // print the final total
+        System.out.println(finalTotal);
 
     }
 
